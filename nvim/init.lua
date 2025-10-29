@@ -1,6 +1,3 @@
-vim.g.mapleader = " "
--- vim.keymap.set("n", "<C-N>", vim.cmd.Ex)
-
 vim.wo.number = true
 vim.wo.relativenumber = true
 -- hold down control to move cursor while in inserrt mode
@@ -42,7 +39,7 @@ vim.pack.add({
     { src = "https://github.com/nvim-treesitter/playground"},
     { src = "https://github.com/ThePrimeagen/harpoon"},
     { src = "https://github.com/windwp/nvim-autopairs"},
-
+    { src = "https://github.com/nvim-lua/plenary.nvim"}
 })
 
 
@@ -64,10 +61,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 -- In your init.lua or a relevant configuration file
 vim.cmd("highlight FloatBorder guifg=#8be9fd guibg=NONE") -- Sets foreground color (border color) to a light blue
 vim.opt.winborder = "rounded"
-
-require("Mason").setup({
-
-})
 
 require('nvim-autopairs').setup {
     map_cr = false, -- This disables the Enter mapping
