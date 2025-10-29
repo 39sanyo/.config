@@ -1,0 +1,41 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "2b44b9c",
+      "src": "https://github.com/Saghen/blink.cmp"
+    },
+    "mason.nvim": {
+      "rev": "ad7146a",
+      "src": "https://github.com/mason-org/mason.nvim"
+    },
+    "mini.pick": {
+      "rev": "96ee37d",
+      "src": "https://github.com/nvim-mini/mini.pick"
+    },
+    "nvim-lspconfig": {
+      "rev": "e688b48",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
+    "oil.nvim": {
+      "rev": "919e155",
+      "src": "https://github.com/stevearc/oil.nvim"
+    },
+    "telescope-ui-select.nvim": {
+      "rev": "6e51d7d",
+      "src": "https://github.com/nvim-telescope/telescope-ui-select.nvim"
+    },
+    "telescope.nvim": {
+      "rev": "a0bbec2",
+      "src": "https://github.com/nvim-telescope/telescope.nvim",
+      "version": "'0.1.8'"
+    },
+    "typr": {
+      "rev": "bdd9ef7",
+      "src": "https://github.com/nvzone/typr"
+    },
+    "vague.nvim": {
+      "rev": "27a19ff",
+      "src": "https://github.com/vague-theme/vague.nvim"
+    }
+  }
+}
