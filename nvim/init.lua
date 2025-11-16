@@ -1,3 +1,7 @@
+vim.g.mapleader = ' '
+
+vim.o.termguicolors = true
+
 vim.wo.number = true
 vim.wo.relativenumber = true
 -- hold down control to move cursor while in inserrt mode
@@ -28,7 +32,9 @@ vim.opt.cindent = true     -- Enable C-style indenting
 vim.opt.completeopt = { "menuone", "noselect", "popup" }
 
 vim.pack.add({
+    { src = "https://github.com/jacksonludwig/vim-earl-grey"},
     { src = "https://github.com/vague-theme/vague.nvim" },
+    { src = "https://github.com/rktjmp/lush.nvim" },
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/stevearc/oil.nvim" },
@@ -36,12 +42,11 @@ vim.pack.add({
     { src = "https://github.com/nvim-telescope/telescope-ui-select.nvim" },
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter"},
-    { src = "https://github.com/nvim-treesitter/playground"},
     { src = "https://github.com/ThePrimeagen/harpoon"},
     { src = "https://github.com/windwp/nvim-autopairs"},
+    { src = "https://github.com/ggandor/leap.nvim"},
     { src = "https://github.com/nvim-lua/plenary.nvim"}
 })
-
 
 
 vim.api.nvim_create_autocmd('LspAttach', {
@@ -83,6 +88,18 @@ require("oil").setup({
     },
 })
 
+
+require("nvim-treesitter.configs").setup {
+  highlight = {
+    enable =true, -- Set to false to disable highlighting globally
+  },
+  indent = {
+    enable = true, -- Set to false to disable indentation globally
+  },
+  -- ... other Treesitter configurations
+}
+
+
 local telescope = require("telescope")
 telescope.setup({
     defaults = {
@@ -110,12 +127,25 @@ telescope.setup({
 })
 telescope.load_extension("ui-select")
 
-vim.keymap.set("n", "<leader>f", ":Telescope find_files<CR>")
+vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
 vim.keymap.set("n", "<C-N>", ":Oil<CR>")
 vim.lsp.enable({ "lua_ls", "clangd", "pyright", "html-lsp", "css-lsp", "gopls"})
 
--- vim.schedule(function()
---     vim.cmd('Oil')
--- end)
-vim.cmd("colorscheme vague")
-vim.cmd(":hi statusline guibg=NONE")
+--leap
+vim.keymap.set({'n', 'x', 'o'}, 'we', '<PLUG>(leap)')
+vim.keymap.set('n', 'WE', '<PLUG>(leap-from-window)')
+
+-- earl-gray settings (comment this whole chunk out if you wan't to use another theme <3)
+vim.cmd("colorscheme vim-earl-grey")
+vim.cmd("set background=light")
+vim.api.nvim_set_hl(0, "StatusLine", { fg = "#747B4D", bg = "#FCFBF9", bold = true })
+
+
+vim.o.statusline = "%y %F | Line:%l"
+vim.o.laststatus = 2
+
+-- vim.cmd("colorscheme cardboard")
+-- vim.cmd("colorscheme vague")
+-- vim.cmd(":hi statusline guibg=NONE")
+
+

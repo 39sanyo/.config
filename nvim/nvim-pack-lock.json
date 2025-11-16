@@ -1,11 +1,37 @@
 {
   "plugins": {
+    "cardboard.nvim": {
+      "rev": "caef338",
+      "src": "https://github.com/39sanyo/cardboard.nvim"
+    },
+    "flash.nvim": {
+      "rev": "fcea7ff",
+      "src": "https://github.com/folke/flash.nvim"
+    },
+    "gruvbox.nvim": {
+      "rev": "5e0a460",
+      "src": "https://github.com/ellisonleao/gruvbox.nvim"
+    },
     "harpoon": [],
-    "mason.nvim": [],
+    "leap.nvim": {
+      "rev": "1fc7f38",
+      "src": "https://github.com/ggandor/leap.nvim"
+    },
+    "lush.nvim": {
+      "rev": "9c60ec2",
+      "src": "https://github.com/rktjmp/lush.nvim"
+    },
+    "mason.nvim": {
+      "rev": "57e5a8a"
+    },
     "nvim-autopairs": [],
-    "nvim-lspconfig": [],
+    "nvim-lspconfig": {
+      "rev": "c6f05c0"
+    },
     "nvim-treesitter": [],
-    "oil.nvim": [],
+    "oil.nvim": {
+      "rev": "7e1cd77"
+    },
     "playground": [],
     "plenary.nvim": {
       "rev": "b9fd522",
@@ -15,6 +41,16 @@
     "telescope.nvim": {
       "version": "'0.1.8'"
     },
-    "vague.nvim": []
+    "vague.nvim": {
+      "rev": "dba2805"
+    },
+    "vim-earl-grey": {
+      "rev": "ad25c66",
+      "src": "https://github.com/jacksonludwig/vim-earl-grey"
+    },
+    "vim-themes": {
+      "rev": "be027da",
+      "src": "https://github.com/mswift42/vim-themes"
+    }
   }
 }
