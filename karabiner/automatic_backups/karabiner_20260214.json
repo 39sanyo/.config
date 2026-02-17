@@ -89,14 +89,6 @@
                         "vendor_id": 1452
                     },
                     "ignore": false
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": true,
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 8264,
-                        "vendor_id": 8264
-                    }
                 }
             ],
             "name": "Default profile",
