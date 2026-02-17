@@ -1,8 +1,8 @@
 [env]
-TERM = "screen-256color"
+TERM="xterm-256color"
 
 [font]
-size = 22
+size = 20
 
 # [font.bold]
 # style = "Bold"
@@ -12,8 +12,7 @@ size = 22
 # git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
 
 [font.normal]
-family = "FiraCode Nerd Font"
-style = "Regular"
+family = "Fira Code"
 
 # [[keyboard.bindings]]
 # chars = "\u001BOH"
@@ -130,5 +129,9 @@ option_as_alt = "Both"
 x = 0
 y = 0
 
+[cursor]
+style = "Beam" # Or "Block", "Underline"
+
 [general]
-import = ["themes//themes/vague.toml"]
+# import  ["/Users/santiagoochoa/.config/alacritty/earl-gray.toml"]
+import = ["/Users/santiagoochoa/.config/alacritty/vague.toml"]

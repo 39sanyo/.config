@@ -5,21 +5,26 @@ yabai -m config layout bsp
 yabai -m config window_placement second_child
 
 # making space for simplebar for external monitors
-# yabai -m config external_bar all:33:0
+# yabai -m config external_bar all:0:34
 
 # Gaps
-yabai -m config top_padding 0
-yabai -m config bottom_padding 0
-yabai -m config left_padding 0
-yabai -m config right_padding 0
-yabai -m config window_gap 0
+yabai -m config top_padding 13
+yabai -m config bottom_padding 13
+yabai -m config left_padding 13
+yabai -m config right_padding 13
+yabai -m config window_gap 13
+
+# yabai -m config top_padding 0
+# yabai -m config bottom_padding 0
+# yabai -m config left_padding 0
+# yabai -m config right_padding 0
+# yabai -m config window_gap 0
 
 # spaces
 yabai -m space 1 --label one
 yabai -m space 2 --label two
 yabai -m space 3 --label three
 yabai -m space 4 --label four
-yabai -m space 5 --label four
 
 # -- Mouse Cursor Settings --
 
@@ -60,7 +65,11 @@ yabai -m rule --add app="^Prism Launcher$" manage=off
 yabai -m rule --add app="^java$" manage=off
 yabai -m rule --add app="^FL Studio 2024$" manage=off
 yabai -m rule --add app="^Python$" manage=off
-yabai -m rule --add app="^Zathura$" manage=on
+yabai -m rule --add app="^Find My$" manage=off
+yabai -m rule --add app="^WhatsApp$" manage=off
+yabai -m rule --add app="^cutentr$" manage=off
+yabai -m rule --add app="^Citrahold$" manage=off
+yabai -m rule --add app="^Citrahold PC v1.1.0$" manage=off
 
 #borders
 borders active_color=0xffe8d8ae inactive_color=0xff3b3634 width=6 &
