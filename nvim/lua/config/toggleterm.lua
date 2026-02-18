@@ -7,7 +7,7 @@ local mytoggle = Terminal:new({
     -- This ensures it stays fixed if you open/close other splits
     on_open = function(term)
         -- 1. Calculate 40% of the current total screen columns
-        local dynamic_width = math.floor(vim.o.columns * 0.4)
+        local dynamic_width = math.floor(vim.o.columns * 0.5)
         -- 2. Force the window to that width
         vim.api.nvim_win_set_width(0, dynamic_width)
         -- 3. Lock it so other split changes don't squish it

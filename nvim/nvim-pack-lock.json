@@ -9,6 +9,10 @@
     "dressing.nvim": [],
     "harpoon": [],
     "img-clip.nvim": [],
+    "kanagawa.nvim": {
+      "rev": "aef7f5c",
+      "src": "https://github.com/rebelot/kanagawa.nvim"
+    },
     "leap.nvim": [],
     "live-server.nvim": [],
     "lspkind-nvim": [],

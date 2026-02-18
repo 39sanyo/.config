@@ -50,6 +50,7 @@ vim.pack.add({
     { src = "https://github.com/hrsh7th/nvim-cmp"},
     { src = "https://github.com/akinsho/toggleterm.nvim"},
     { src = "https://github.com/windwp/nvim-ts-autotag"},
+    { src = "https://github.com/rebelot/kanagawa.nvim"},
 })
 
 
@@ -182,8 +183,10 @@ vim.keymap.set('n', 'F', '<PLUG>(leap-from-window)')
 vim.o.statusline = "%y %F | Line:%l"
 vim.o.laststatus = 2
 
+
 -- vim.cmd("colorscheme cardboard")
-vim.cmd("colorscheme vague")
+-- vim.cmd("colorscheme vague")
+vim.cmd("colorscheme kanagawa-dragon")
 -- vim.cmd(":hi statusline guibg=NONE")
 -- vim.cmd("colorscheme custom")
 
