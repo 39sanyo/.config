@@ -23,7 +23,6 @@ vim.keymap.set("n", "<C-k>", "<C-w>k", { silent = true, desc = "Move to up split
 vim.keymap.set("n", "<C-l>", "<C-w>l", { silent = true, desc = "Move to right split" })
 
 vim.keymap.set("n", '<leader>lf', vim.lsp.buf.format)
-
 vim.opt.shiftwidth = 4     -- Sets the width of a software tabstop and the size of an indent
 vim.opt.tabstop = 4        -- Sets the width of a tab character
 vim.opt.expandtab = true   -- Converts tabs to spaces
@@ -51,6 +50,7 @@ vim.pack.add({
     { src = "https://github.com/akinsho/toggleterm.nvim"},
     { src = "https://github.com/windwp/nvim-ts-autotag"},
     { src = "https://github.com/rebelot/kanagawa.nvim"},
+    { src = "https://github.com/nvim-tree/nvim-tree.lua"},
 })
 
 
@@ -108,6 +108,7 @@ require('cmp').setup({
     { name = 'buffer' },
     -- Add custom trigger characters if desired, but exclude the autopairs ones
   }),
+  vim.cmd("highlight FloatBorder guibg=NONE"),
 })
 
 
@@ -130,6 +131,8 @@ require("oil").setup({
         border = "rounded",
     },
 })
+
+require('nvim-tree').setup()
 
 
 require("nvim-treesitter.configs").setup {
@@ -183,11 +186,25 @@ vim.keymap.set('n', 'F', '<PLUG>(leap-from-window)')
 vim.o.statusline = "%y %F | Line:%l"
 vim.o.laststatus = 2
 
+require("kanagawa").setup({
+    keywordStyle = { italic= true },
+    theme = "dragon",
+    undercurl = true,
+    commentStyle = { italic= true },
+    functionStlye = { italic = true },
+    statementStyle = { italic = true },
+    NormalFloat = {bg = "none"},
+    FloatBorder = {bg = "none"},
+    FloatTitle = {bg = "none"},
+})
+
+require("kanagawa").load("dragon")
+
+vim.cmd("colorscheme kanagawa-dragon")
+
 
 -- vim.cmd("colorscheme cardboard")
 -- vim.cmd("colorscheme vague")
-vim.cmd("colorscheme kanagawa-dragon")
 -- vim.cmd(":hi statusline guibg=NONE")
 -- vim.cmd("colorscheme custom")
-
 

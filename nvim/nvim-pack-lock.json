@@ -23,6 +23,10 @@
     "nvim-autopairs": [],
     "nvim-cmp": [],
     "nvim-lspconfig": [],
+    "nvim-tree.lua": {
+      "rev": "e11ce83",
+      "src": "https://github.com/nvim-tree/nvim-tree.lua"
+    },
     "nvim-treesitter": [],
     "nvim-ts-autotag": {
       "rev": "8e1c0a3",

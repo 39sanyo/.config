@@ -1,5 +1,5 @@
 # open terminal
-cmd - return : open -n -a "alacritty"
+cmd - return : open -n -a "kitty"
 
 # open browser
 cmd + shift - return : open -n -a "Firefox" 
