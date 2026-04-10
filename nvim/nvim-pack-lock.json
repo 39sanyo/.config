@@ -20,6 +20,11 @@
     "mason-lspconfig.nvim": [],
     "mason.nvim": [],
     "mini.pick": [],
+    "neo-tree.nvim": {
+      "rev": "08edbf0",
+      "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
+    },
+    "nui.nvim": [],
     "nvim-autopairs": [],
     "nvim-cmp": [],
     "nvim-lspconfig": [],
@@ -35,6 +40,10 @@
     "oil.nvim": [],
     "plenary.nvim": [],
     "snacks.nvim": [],
+    "supermaven-nvim": {
+      "rev": "07d20fc",
+      "src": "https://github.com/supermaven-inc/supermaven-nvim"
+    },
     "telescope-ui-select.nvim": [],
     "telescope.nvim": {
       "version": "'0.1.8'"

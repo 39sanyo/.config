@@ -50,7 +50,9 @@ vim.pack.add({
     { src = "https://github.com/akinsho/toggleterm.nvim"},
     { src = "https://github.com/windwp/nvim-ts-autotag"},
     { src = "https://github.com/rebelot/kanagawa.nvim"},
-    { src = "https://github.com/nvim-tree/nvim-tree.lua"},
+    { src = "https://github.com/nvim-neo-tree/neo-tree.nvim"},
+    { src = "https://github.com/MunifTanjim/nui.nvim"},
+    { src = "https://github.com/supermaven-inc/supermaven-nvim" }
 })
 
 
@@ -94,12 +96,14 @@ require('nvim-autopairs').setup {
 }
 
 require('config.toggleterm')
-
 require('config.harpoon')
-
 require('config.tsautotag')
+require('config.neotree')
 
-require('mason').setup{}
+-- require("supermaven-nvim").setup({})
+
+require('mason').setup({})
+
 
 require('cmp').setup({
   -- ... other configuration ...
@@ -113,26 +117,32 @@ require('cmp').setup({
 
 
 require("oil").setup({
+    delete_to_trash = true,
+    skip_confirm_for_simple_edits = true,
     view_options = {
-        show_hidden = true
-    },
-    lsp_file_methods = {
-        enabled = true,
-        timeout_ms = 1000,
-        autosave_changes = true,
-    },
-    columns = {
-        "permissions",
-        "icon",
+        show_hidden = true,
     },
     float = {
-        max_width = 0.7,
-        max_height = 0.6,
         border = "rounded",
+        max_width = 0.5,
+        padding = 10,
+        win_options = {
+            winblend = 100;
+            winhl = "NormalFloat:NormalFloat,SignColumn:SignColumn",
+        }
     },
-})
-
-require('nvim-tree').setup()
+    confirmation = {
+        max_width = 0.9,
+        min_width = { 40, 0.4 },
+        width = nil,
+        max_height = 0.9,
+        min_height = { 5, 0.1 },
+        height = nil,
+        border = nil,
+        win_options = {
+          winblend = 0,
+      }
+     }})
 
 
 require("nvim-treesitter.configs").setup {
@@ -171,38 +181,40 @@ telescope.load_extension("ui-select")
 
 vim.keymap.set("n", "<leader>ff", ":Telescope find_files<CR>")
 vim.keymap.set("n", "<C-N>", ":Oil<CR>")
-vim.lsp.enable({ "lua_ls", "clangd", "pyright", "html", "cssls", "gopls"})
+vim.lsp.enable({ "lua_ls", "clangd", "pyright", "html", "cssls", "gopls", "rust_analyzer", "ts_ls"})
 
 --leap
 vim.keymap.set({'n', 'x', 'o'}, 'f', '<PLUG>(leap)')
 vim.keymap.set('n', 'F', '<PLUG>(leap-from-window)')
 
 -- earl-gray settings (comment this whole chunk out if you wan't to use another theme <3)
--- vim.cmd("colorscheme vim-earl-grey")
--- vim.cmd("set background=light")
--- vim.api.nvim_set_hl(0, "StatusLine", { fg = "#747B4D", bg = "#FCFBF9", bold = true })
+vim.cmd("colorscheme vim-earl-grey")
+vim.cmd("set background=light")
+vim.api.nvim_set_hl(0, "StatusLine", { fg = "#FCFBF9", bg = "#747B4D", bold = true })
 
 
 vim.o.statusline = "%y %F | Line:%l"
 vim.o.laststatus = 2
 
-require("kanagawa").setup({
-    keywordStyle = { italic= true },
-    theme = "dragon",
-    undercurl = true,
-    commentStyle = { italic= true },
-    functionStlye = { italic = true },
-    statementStyle = { italic = true },
-    NormalFloat = {bg = "none"},
-    FloatBorder = {bg = "none"},
-    FloatTitle = {bg = "none"},
-})
+-- require("kanagawa").setup({
+--     keywordStyle = { italic= true },
+--     theme = "dragon",
+--     undercurl = true,
+--     commentStyle = { italic= true },
+--     functionStyle = { italic = true },
+--     transparent = { true },
+--     NormalFloat = {bg = "none"},
+--     FloatBorder = {bg = "none"},
+--     FloatTitle = {bg = "none"},
+-- })
+-- 
+-- require("kanagawa").load("dragon")
+-- vim.cmd("colorscheme kanagawa-dragon")
 
-require("kanagawa").load("dragon")
-
-vim.cmd("colorscheme kanagawa-dragon")
-
-
+vim.cmd("hi CursorLineNR guibg=NONE ctermbg=NONE")
+vim.cmd("hi SignColumn guibg=NONE ctermbg=NONE")
+vim.cmd("hi FoldColumn guibg=NONE ctermbg=NONE")
+vim.cmd("hi LineNr guibg=NONE")
 -- vim.cmd("colorscheme cardboard")
 -- vim.cmd("colorscheme vague")
 -- vim.cmd(":hi statusline guibg=NONE")
