@@ -2,7 +2,7 @@ vim.g.mapleader = ' '
 
 vim.o.termguicolors = true
 
-vim.opt.scrolloff = 999
+vim.opt.scrolloff =  0
 
 vim.wo.number = true
 vim.wo.relativenumber = true
@@ -52,7 +52,9 @@ vim.pack.add({
     { src = "https://github.com/rebelot/kanagawa.nvim"},
     { src = "https://github.com/nvim-neo-tree/neo-tree.nvim"},
     { src = "https://github.com/MunifTanjim/nui.nvim"},
-    { src = "https://github.com/supermaven-inc/supermaven-nvim" }
+    { src = "https://github.com/supermaven-inc/supermaven-nvim" },
+    { src = "https://github.com/e-ink-colorscheme/e-ink.nvim" },
+    { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
 })
 
 
@@ -95,6 +97,7 @@ require('nvim-autopairs').setup {
     map_cr = true, -- This disables the Enter mapping
 }
 
+
 require('config.toggleterm')
 require('config.harpoon')
 require('config.tsautotag')
@@ -104,6 +107,12 @@ require('config.neotree')
 
 require('mason').setup({})
 
+require("ibl").setup({
+    indent = { char = "┊",
+    highlight = { "Comment" },
+},
+    whitespace = { highlight = { "Whitespace", "NonText" } },
+});
 
 require('cmp').setup({
   -- ... other configuration ...
@@ -210,6 +219,11 @@ vim.o.laststatus = 2
 -- 
 -- require("kanagawa").load("dragon")
 -- vim.cmd("colorscheme kanagawa-dragon")
+
+
+-- require('e-ink').setup()
+-- vim.cmd.colorscheme 'e-ink'
+
 
 vim.cmd("hi CursorLineNR guibg=NONE ctermbg=NONE")
 vim.cmd("hi SignColumn guibg=NONE ctermbg=NONE")

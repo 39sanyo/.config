@@ -7,8 +7,16 @@
     "cmp_luasnip": [],
     "copilot.lua": [],
     "dressing.nvim": [],
+    "e-ink.nvim": {
+      "rev": "a0f003a",
+      "src": "https://github.com/e-ink-colorscheme/e-ink.nvim"
+    },
     "harpoon": [],
     "img-clip.nvim": [],
+    "indent-blankline.nvim": {
+      "rev": "d28a3f7",
+      "src": "https://github.com/lukas-reineke/indent-blankline.nvim"
+    },
     "kanagawa.nvim": {
       "rev": "aef7f5c",
       "src": "https://github.com/rebelot/kanagawa.nvim"
