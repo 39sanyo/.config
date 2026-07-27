@@ -2,6 +2,10 @@
   "plugins": {
     "LuaSnip": [],
     "avante.nvim": [],
+    "base16-nvim": {
+      "rev": "7090884",
+      "src": "https://github.com/RRethy/base16-nvim"
+    },
     "cmp-buffer": [],
     "cmp-path": [],
     "cmp_luasnip": [],
@@ -21,12 +25,24 @@
       "rev": "aef7f5c",
       "src": "https://github.com/rebelot/kanagawa.nvim"
     },
+    "kanso.nvim": {
+      "rev": "1afbbb4",
+      "src": "https://github.com/webhooked/kanso.nvim"
+    },
+    "koda.nvim": {
+      "rev": "a7da3ce",
+      "src": "https://github.com/oskarnurm/koda.nvim"
+    },
     "leap.nvim": [],
     "live-server.nvim": [],
     "lspkind-nvim": [],
     "lush.nvim": [],
     "mason-lspconfig.nvim": [],
     "mason.nvim": [],
+    "mfd.nvim": {
+      "rev": "72ae627",
+      "src": "https://github.com/kungfusheep/mfd.nvim"
+    },
     "mini.pick": [],
     "neo-tree.nvim": {
       "rev": "08edbf0",
@@ -58,6 +74,14 @@
     },
     "toggleterm.nvim": [],
     "vague.nvim": [],
-    "vim-earl-grey": []
+    "vim-colors-notepad-plus-plus": {
+      "rev": "9a84dba",
+      "src": "https://github.com/sakibmoon/vim-colors-notepad-plus-plus"
+    },
+    "vim-earl-grey": [],
+    "zen-mode.nvim": {
+      "rev": "8564ce6",
+      "src": "https://github.com/folke/zen-mode.nvim"
+    }
   }
 }
