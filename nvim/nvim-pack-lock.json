@@ -48,6 +48,10 @@
       "rev": "08edbf0",
       "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
     },
+    "no-clown-fiesta.nvim": {
+      "rev": "04b808e",
+      "src": "https://github.com/aktersnurra/no-clown-fiesta.nvim"
+    },
     "nui.nvim": [],
     "nvim-autopairs": [],
     "nvim-cmp": [],

@@ -48,7 +48,12 @@ vim.pack.add({
     { src = "https://github.com/oskarnurm/koda.nvim" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = {"master"},
     { src = "https://github.com/windwp/nvim-autopairs"},
+<<<<<<< Updated upstream
     { src = "https://codeberg.org/andyg/leap.nvim"},
+=======
+    { src = "https://github.com/aktersnurra/no-clown-fiesta.nvim"},
+    { src = "https://github.com/ggandor/leap.nvim"},
+>>>>>>> Stashed changes
     { src = "https://github.com/kungfusheep/mfd.nvim"},
     { src = "https://github.com/nvim-lua/plenary.nvim"},
     { src = "https://github.com/hrsh7th/nvim-cmp"},
@@ -245,7 +250,9 @@ require('kanso').setup({
 -- vim.cmd("colorscheme kanso-zen")
 -- vim.cmd("colorscheme koda-dark")
 -- vim.cmd("colorscheme mfd-flir")
-vim.cmd("colorscheme custom")
+ -- vim.cmd("colorscheme mfd-mono")
+ vim.cmd("colorscheme base16-black-metal-nile")
+-- vim.cmd("colorscheme custom")
 
 
 vim.o.statusline = "%y %t | Line:%l"
