@@ -46,7 +46,7 @@ vim.pack.add({
     { src = "https://github.com/nvim-telescope/telescope-ui-select.nvim" },
     { src = "https://github.com/mason-org/mason.nvim" },
     { src = "https://github.com/oskarnurm/koda.nvim" },
-    { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = {"master"},
+    { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master"},
     { src = "https://github.com/windwp/nvim-autopairs"},
     { src = "https://codeberg.org/andyg/leap.nvim"},
     { src = "https://github.com/aktersnurra/no-clown-fiesta.nvim"},
