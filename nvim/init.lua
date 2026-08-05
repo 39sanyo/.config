@@ -39,29 +39,27 @@ vim.opt.completeopt = { "menuone", "noselect", "popup" }
 
 vim.pack.add({
     { src = "https://github.com/jacksonludwig/vim-earl-grey"},
-    { src = "https://github.com/sakibmoon/vim-colors-notepad-plus-plus"},
     { src = "https://github.com/neovim/nvim-lspconfig" },
     { src = "https://github.com/stevearc/oil.nvim" },
     { src = "https://github.com/nvim-telescope/telescope.nvim", version = "0.1.8" },
     { src = "https://github.com/nvim-telescope/telescope-ui-select.nvim" },
     { src = "https://github.com/mason-org/mason.nvim" },
-    { src = "https://github.com/oskarnurm/koda.nvim" },
     { src = "https://github.com/nvim-treesitter/nvim-treesitter", version = "master"},
     { src = "https://github.com/theprimeagen/harpoon"},
     { src = "https://github.com/windwp/nvim-autopairs"},
     { src = "https://codeberg.org/andyg/leap.nvim"},
-    { src = "https://github.com/aktersnurra/no-clown-fiesta.nvim"},
     { src = "https://github.com/kungfusheep/mfd.nvim"},
     { src = "https://github.com/nvim-lua/plenary.nvim"},
     { src = "https://github.com/hrsh7th/nvim-cmp"},
     { src = "https://github.com/akinsho/toggleterm.nvim"},
     { src = "https://github.com/windwp/nvim-ts-autotag"},
     { src = "https://github.com/RRethy/base16-nvim"},
-    { src = "https://github.com/rebelot/kanagawa.nvim"},
-    { src = "https://github.com/nvim-neo-tree/neo-tree.nvim"},
     { src = "https://github.com/lukas-reineke/indent-blankline.nvim" },
+    { src = "https://github.com/abecodes/tabout.nvim" },
     { src = "https://github.com/webhooked/kanso.nvim" },
+    { src = "https://github.com/norcalli/nvim-colorizer.lua" },
     { src = "https://github.com/folke/zen-mode.nvim" },
+    { src = "https://github.com/goolord/alpha-nvim" },
 })
 
 
@@ -100,10 +98,21 @@ vim.api.nvim_create_autocmd('LspAttach', {
 vim.cmd("highlight FloatBorder guifg=#8be9fd guibg=NONE") -- Sets foreground color (border color) to a light blue
 vim.opt.winborder = "rounded"
 
+require'colorizer'.setup()
+
+require('tabout').setup({
+  tabkey = '<Tab>',
+  backwards_tabkey = '<S-Tab>',
+  act_as_tab = true,
+  enable_backwards = true,
+  completion = false,
+})
+
 require('nvim-autopairs').setup {
    map_cr = true, -- This disables the Enter mapping
 }
 
+require('alpha-config')
 require('config.toggleterm')
 require('config.harpoon')
 require('config.tsautotag')

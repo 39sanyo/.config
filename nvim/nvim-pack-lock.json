@@ -1,6 +1,10 @@
 {
   "plugins": {
     "LuaSnip": [],
+    "alpha-nvim": {
+      "rev": "6c6a89d",
+      "src": "https://github.com/goolord/alpha-nvim"
+    },
     "avante.nvim": [],
     "base16-nvim": {
       "rev": "7090884",
@@ -55,12 +59,18 @@
     "nui.nvim": [],
     "nvim-autopairs": [],
     "nvim-cmp": [],
+    "nvim-colorizer.lua": {
+      "rev": "a065833",
+      "src": "https://github.com/norcalli/nvim-colorizer.lua"
+    },
     "nvim-lspconfig": [],
     "nvim-tree.lua": {
       "rev": "e11ce83",
       "src": "https://github.com/nvim-tree/nvim-tree.lua"
     },
-    "nvim-treesitter": [],
+    "nvim-treesitter": {
+      "version": "'master'"
+    },
     "nvim-ts-autotag": {
       "rev": "8e1c0a3",
       "src": "https://github.com/windwp/nvim-ts-autotag"
@@ -71,6 +81,10 @@
     "supermaven-nvim": {
       "rev": "07d20fc",
       "src": "https://github.com/supermaven-inc/supermaven-nvim"
+    },
+    "tabout.nvim": {
+      "rev": "9a34994",
+      "src": "https://github.com/abecodes/tabout.nvim"
     },
     "telescope-ui-select.nvim": [],
     "telescope.nvim": {
